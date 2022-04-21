@@ -3,7 +3,7 @@
   if (true) {
     var someVar = 'This is true';
   }
-  console.log(someVar);
+  // console.log(someVar);
 // Let i const son block scoped
 
 
@@ -26,12 +26,13 @@ function outerFunction() {
 
 // Hoisting: las variables var y las funciones declaradas con "function"
 // se elevan y se inicializan como undefined
-// console.log(message);
-var message = 'Message'; 
-console.log(message) // => undefined
 
-const secondMessage = 'Message';
-console.log(secondMessage); // => Error
+// console.log(message) // => undefined
+var message = 'Message'; 
+
+// console.log(secondMessage); // => Error
+const secondMessage = 'Second message';
+
 
 //thirdFunction(); // => Esta función la podemos invocar antes de que esté declarada por el hoisting
 const thirdFunction = () => {
@@ -45,7 +46,7 @@ const thirdFunction = () => {
   }
 let c = 4;
 const b = 2; // => las variables const y let no se almacenan en window
-console.log(window.a); // => 1
+// console.log(window.a); // => 1
 
 
 
