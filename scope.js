@@ -46,7 +46,7 @@ const thirdFunction = () => {
   }
 let c = 4;
 const b = 2; // => las variables const y let no se almacenan en window
-// console.log(window.a); // => 1
+// econsole.log(window.a); // => 1
 
 
 
