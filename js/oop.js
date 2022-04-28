@@ -80,11 +80,12 @@ const aria = new Animal('Aria', 'brown', 'woof');
 aria.makeSound();
 
 class Bird extends Animal{
-  constructor(name, color, sound, beakColor, flyMax) {
+  constructor(color, sound, beakColor, flyMax) {
     // Con la palabra super le digo qué elementos comparte con la función constructora de la clase padre para que haga lo mismo con ellos. Puedo añadir los que considere
-    super(name, color, sound);
-    this.beakColor = beakColor;
+    super(color, sound);
+    this.name = 'Charlie';
     this.flyMax = flyMax;
+    this.beakColor = beakColor;
   }
   // Polimorfismo: puedo reescribir un método en la clase hija
   makeSound() {
@@ -96,7 +97,7 @@ class Bird extends Animal{
   }
 }
 
-const charlie = new Bird('Charlie', 'green', 'WRAAAAH', 'red', 1000);
+const charlie = new Bird('green', 'WRAAAAH', 'red', 1000);
 charlie.makeSound();
 
 

@@ -46,10 +46,10 @@ const user = {
     console.log(this);
     // arrow function will borrow `this` value from the surrounding scope
     // of `regularMethod` where it was created
-    // let anotherFunction = () => {
-    //   console.log(this);
-    // }
-    // return anotherFunction();
+    let anotherFunction = () => {
+      console.log(this);
+    }
+    return anotherFunction();
   }, 
   // Arrow function methods => pierde el this (Window / Global object) porque coge lexical scope = ¿dónde esta declarado el objeto? En window
   arrowFunc: () => {
@@ -60,7 +60,7 @@ const user = {
     number: 3,
     // Nested objects => Al objeto al que pertenece el nested object
     nestedFunc: function () {
-      console.log(this)
+      console.log(this);
     }
   }
 }
@@ -93,17 +93,21 @@ const marina = new User('Marina')
 class Person{
   constructor(name){
     this.name = name;
+    this.array = [1,3,4]
   }
   // Depende de dónde sea llamado con las funciones normales (setTimeout es llamado por window)
   printNameWithFunction() {
-    setTimeout(function () { console.log(`Name: ${this.name}`)}, 500);
+    //console.log(this.name)
+    //setTimeout(function () { console.log(this), 1000 });;
+    this.array.forEach((elem) => console.log(elem));
   }
   // Coge lexical scope (donde está creado => Dentro de Person / nueva instancia
   printNameWithArrow() {
-    setTimeout(() => { console.log(`Name: ${this.name}`)}, 500);
+    this.printNameWithFunction()
+    setTimeout(() => { console.log(this)}, 1000);
   }
 }
 
 const bob = new Person('Bob');
-// bob.printNameWithFunction();
-// bob.printNameWithArrow();
+bob.printNameWithFunction();
+//bob.printNameWithArrow();

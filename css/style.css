@@ -1,0 +1,15 @@
+.active {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+h1 {
+  color: lightseagreen;
+}
