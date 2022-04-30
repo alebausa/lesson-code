@@ -1,7 +1,7 @@
 console.log(document);
 
 // Select by id
-const cat = document.getElementById('cat');
+
 // className me permite leer clase 
 // si lo asigno puedo cambiar la id o la clase (className)
 // div.className = 'dog'
@@ -14,6 +14,7 @@ cat.innerHTML = `<h3>My name is ${myName}</h3>`
 // Select class
 const mice = document.getElementsByClassName('mouse');
 const miceArr = Array.from(mice);
+// [...miceArr]
 // miceArr.forEach(elem => console.log(elem))
 
 // Select Tags
@@ -53,12 +54,15 @@ linkAttribute.setAttribute('class', 'link');
 linkAttribute.removeAttribute('href');
 
 // Crear elementos
-const heading3 = document.createElement('h3');
-heading3.innerHTML = "I'm a heading!"
+const heading3 = document.createElement('h3'); // Creo
+<h3></h3> //
+const cat = document.getElementById('cat'); //
+heading3.innerHTML = "I'm a heading!" // contenido
 // Prepend añade al principio
-cat.prepend(heading3);
+cat.prepend(heading3); // 
 // appendChild añade al final
 //cat.appendChild(heading3)
+cat.removeChild(heading3);
 
 const text = document.createTextNode('El texto que creas');
 cat.appendChild(text);

@@ -12,12 +12,18 @@
  <main>
       <h1 class="heading">Welcome to your website!</h1>
       <div class="container">
-        <h4>These are your options:</h4>
-
         <button id="hideBtn">Click me!</button>
         <div id="hide-p" class="show">And I will hide 👀</div>
         
-        <a class="anchor">I'm a link</a>
+        <h4>List of my favorite foods:</h4>
+        <ul id="food-list">
+          <li>Bacon 🥓</li>
+          <li>Salad 🥗</li>
+        </ul>
+          <label>Your favorite food</label>
+          <input type="text" id="food-input" placeholder="Add one of your favorite foods here"/>
+          <button id="food-button" onclick="addToList()">Add to list</button>
+
       </div>
       <script src="js/about-dom.js"></script>
  </main>
